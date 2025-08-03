@@ -52,3 +52,14 @@ it("should thow a error if no value is passed", () => {
 
   expect(resultFn).toThrow();
 });
+
+it("should throw an error if multiple args passed instead of an array", () => {
+  const num1 = 1;
+  const num2 = 2;
+
+  const resultFn = () => {
+    add(num1, num2);
+  };
+
+  expect(resultFn).toThrow();
+});
