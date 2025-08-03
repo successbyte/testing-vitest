@@ -15,3 +15,24 @@ it("it should summerize all numbers in an array", () => {
   );
   expect(result).toBe(expectedResult);
 });
+
+it("should return NAN if at at least one invalid number provided", () => {
+  const inputs = ["string", 5];
+
+  const result = add(inputs);
+
+  expect(result).toBeNaN();
+});
+
+it("should retuen a correct sum if an array of numeric string value is provided", () => {
+  const inputs = ["4", 3, "3"];
+
+  const result = add(inputs);
+
+  const expectedResult = inputs.reduce(
+    (prevValue, curValue) => prevValue + +curValue,
+    0
+  );
+
+  expect(result).toBe(expectedResult);
+});
