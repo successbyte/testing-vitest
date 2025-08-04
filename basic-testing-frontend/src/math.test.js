@@ -50,7 +50,7 @@ it("should thow a error if no value is passed", () => {
     add();
   };
 
-  expect(resultFn).toThrow();
+  expect(resultFn).toThrow(/is not iterable/);
 });
 
 it("should throw an error if multiple args passed instead of an array", () => {
@@ -61,5 +61,5 @@ it("should throw an error if multiple args passed instead of an array", () => {
     add(num1, num2);
   };
 
-  expect(resultFn).toThrow();
+  expect(resultFn).toThrow(/is not iterable/);
 });
