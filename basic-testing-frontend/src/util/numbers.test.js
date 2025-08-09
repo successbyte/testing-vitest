@@ -16,8 +16,11 @@ it("should transform a string number to number", () => {
 
 it("throws error (NAN) if input is not string or a number", () => {
   const input = [4, "5"];
+  const input2 = "string";
 
   const result = transformToNumber(input);
+  const result2 = transformToNumber(input2);
 
   expect(result).toBeNaN();
+  expect(result2).toBeNaN();
 });
