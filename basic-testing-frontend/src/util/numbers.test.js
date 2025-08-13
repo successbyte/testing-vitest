@@ -41,7 +41,8 @@ describe("cleanNumbers()", () => {
 
     const cleanedNumbers = cleanNumbers(numberValues);
 
-    expect(cleanedNumbers[0]).toBeTypeOf("number");
+    // expect(cleanedNumbers[0]).toBeTypeOf("number");
+    expect(cleanedNumbers).toEqual([1, 2]);
   });
 
   it("should thows error for invalid input", () => {
